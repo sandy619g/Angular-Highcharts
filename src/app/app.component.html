@@ -1,0 +1,22 @@
+<button style="align-content: center;justify-content: center;margin-top: 150;margin-left: :120px" (click)="init()">Reset</button>
+<button (click)="addSerie()">Add Series</button>
+<button (click)="removeSerie()">Remove Series</button>
+<button (click)="addPoint()">Add Point</button>
+<button (click)="removePoint()">Remove Point</button>
+<button (click)="changeType()">Update Chart</button>
+<select (change)="changeCity($event)" class="custom-select">
+    <option value="line">Line</option>
+    <option value="bar">Bar</option>
+    <option value="column">Column</option>
+    <option value="pie">Pie</option>
+
+</select>
+
+<select (change)="changeStack($event)" class="custom-select">
+    <option value="">Simple</option>
+    <option value="normal">Stacked</option>
+
+
+
+</select>
+<div [chart]="chart"></div>
